@@ -80,5 +80,5 @@ email: ''
 highlight_name: true
 ---
 
-Athanasios Vlontzos is a Research Scientist at Spotify working on the intersection of causal inference and machine learning. He holds a PhD from Imperial College London and the Biomedical Imaging Analysis (BioMedIA) group where he worked together with [Prof. Daniel Rueckert ](https://www.imperial.ac.uk/people/d.rueckert) and [Dr Bernhard Kainz](https://bernhard-kainz.com). His research interest involve: Causal Inference, Machine Learning, Macroeconomics, Computer Vision and their real-world applications
+Athanasios Vlontzos is a Research Scientist at Spotify working on the intersection of causal inference and machine learning. He holds a PhD from Imperial College London and the Biomedical Image Analysis (BioMedIA) group where he worked together with [Prof. Daniel Rueckert ](https://www.imperial.ac.uk/people/d.rueckert) and [Dr Bernhard Kainz](https://bernhard-kainz.com). His research interest involve: Causal Inference, Machine Learning, Macroeconomics, Computer Vision and their real-world applications
 {style="text-align: justify;"}
