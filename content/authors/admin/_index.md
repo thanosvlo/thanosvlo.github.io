@@ -14,15 +14,15 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Machine Learning / Artificial Intelligence Research Scientist 
+role: Lead Artificial Intelligence (AI) / Machine Learning (ML) Scientist
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Spotify
-    url: https://spotify.com
+  - name: Monzo Bank UK
+    url: https://monzo.com
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a Research Scientist at Spotify working on the intersection of machine learning and causal inference. I hold a PhD from Imperial College London and the Biomedical Image Analysis group. 
+bio: I lead the ML Personalisation & Search function at Monzo, driving the development of intelligent, responsible systems that personalise product experiences across the app — from Loans and Flex to Savings, Investments, and beyond. I spearhead the design and deployment of ranking models, causal recommender systems, and experimentation frameworks, combining cutting-edge research with production-grade engineering. Alongside building the core systems, I shape Monzo’s broader AI/ML strategy — from governance and evaluation to capability building — ensuring we balance innovation with safety, impact, and scalability. I hold a PhD from Imperial College London and the Biomedical Image Analysis group. 
 
 # Interests to show in About widget
 interests:
@@ -71,7 +71,7 @@ social:
   # and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: uploads/AthanasiosVlontzosCV2023.pdf
+    link: uploads/CV_DR_Athanasios_Vlontzos_2025.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
@@ -80,5 +80,7 @@ email: ''
 highlight_name: true
 ---
 
-Athanasios Vlontzos is a Research Scientist at Spotify working on the intersection of causal inference and machine learning. He holds a PhD from Imperial College London and the Biomedical Image Analysis (BioMedIA) group where he worked together with [Prof. Daniel Rueckert ](https://www.imperial.ac.uk/people/d.rueckert) and [Dr Bernhard Kainz](https://bernhard-kainz.com). His research interest involve: Causal Inference, Machine Learning, Macroeconomics, Computer Vision and their real-world applications
+Athanasios Vlontzos is a Lead Artificial Intelligence / Machine Learning Scientist at Monzo, where he leads the Personalisation & Search functions. His work focuses on developing intelligent, causal machine learning systems that personalise product experiences across Monzo’s platform — spanning areas such as Loans, Flex, Savings, and Investments. He also plays a key role in shaping Monzo’s broader AI strategy, including experimentation frameworks, offline evaluation, and ML governance.
+{style="text-align: justify;"}
+He holds a PhD from Imperial College London, where he was part of the Biomedical Image Analysis (BioMedIA) group, working with Prof. Daniel Rueckert and Dr. Bernhard Kainz. His research interests lie at the intersection of causal inference, machine learning, macroeconomics, and computer vision, with a strong emphasis on real-world impact and high-stakes applications.
 {style="text-align: justify;"}

@@ -1,0 +1,54 @@
+{{/* Table Shortcode override to load CSV via Hugo resources API. */}}
+{{ $src := .Get "path" }}
+{{ if not $src }}
+  {{ errorf "table shortcode: missing required `path` parameter on page %s" $.Page.File.Path }}
+{{ end }}
+{{ $delimiter := .Get "delimiter" | default "," }}
+{{ $useHeaderRow := (eq (lower (.Get "header")) "true") | default true }}
+{{ $caption := .Get "caption" }}
+
+{{ $rows := slice }}
+{{ $unmarshalOpts := dict "inputFormat" "csv" "delimiter" $delimiter "header" false }}
+{{ if strings.HasPrefix $src "http" }}
+  {{ $remote := resources.GetRemote $src }}
+  {{ if not $remote }}
+    {{ errorf "table shortcode: failed to download CSV from %s for %s" $src $.Page.File.Path }}
+  {{ end }}
+  {{ $rows = $remote | transform.Unmarshal $unmarshalOpts }}
+{{ else }}
+  {{ $filePath := path.Join "content" $.Page.File.Dir $src }}
+  {{ if not (fileExists $filePath) }}
+    {{ errorf "table shortcode: CSV %s not found for %s" $filePath $.Page.File.Path }}
+  {{ end }}
+  {{ $content := readFile $filePath }}
+  {{ $resourceName := printf "csv/%x.csv" (sha1 (printf "%s:%s" $.Page.File.Path $src)) }}
+  {{ $resource := resources.FromString $resourceName $content }}
+  {{ $rows = $resource | transform.Unmarshal $unmarshalOpts }}
+{{ end }}
+
+{{ if not (len $rows) }}
+  {{ errorf "table shortcode: no rows could be read from %s for %s" $src $.Page.File.Path }}
+{{ end }}
+
+<table class="table">
+  {{ if $useHeaderRow }}
+    {{ $headerRow := index $rows 0 }}
+    {{ $rows = after 1 $rows }}
+    <tr> {{ range $headerRow }} <th>{{ . | markdownify | emojify }}</th> {{ end }} </tr>
+  {{ end }}
+  {{ range $rows }}
+    <tr>
+      {{ range . }}
+        {{ $cell := . }}
+        {{ if (findRE "^\\d+$" (printf "%v" $cell)) }}
+          <td data-table-dtype="number">{{ $cell }}</td>
+        {{ else }}
+          <td data-table-dtype="text">{{ $cell | markdownify | emojify }}</td>
+        {{ end }}
+      {{ end }}
+    </tr>
+  {{ end }}
+  {{ if $caption }}
+    <caption>{{ $caption | markdownify | emojify }}</caption>
+  {{ end }}
+</table>

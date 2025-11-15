@@ -70,13 +70,22 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
+        - title: Lead Artificial Intelligence (AI) / Machine Learning (ML) Scientist
+          company: Monzo Bank UK
+          company_url: 'monzo.com'
+          company_logo: Monzo_2016_logo
+          location: London,UK
+          date_start: '2022-06-16'
+          date_end: ''
+          description: |2-
+              I lead the ML Personalisation & Search function at Monzo, driving the development of intelligent, responsible systems that personalise product experiences across the app — from Loans and Flex to Savings, Investments, and beyond. I spearhead the design and deployment of ranking models, causal recommender systems, and experimentation frameworks, combining cutting-edge research with production-grade engineering. Alongside building the core systems, I shape Monzo’s broader AI/ML strategy — from governance and evaluation to capability building — ensuring we balance innovation with safety, impact, and scalability.
         - title: Research Scientist
           company: Spotify
           company_url: 'spotify.com'
           company_logo: Spotify_icon
           location: London,UK
           date_start: '2022-08-03'
-          date_end: ''
+          date_end: '2025-06-06'
           description: |2-
               Part of the Advanced Causal Inference Lab (ACI-Lab). Conducting research in causal inference and machine learning.
               Providing causal inference tools to stakeholders in company supporting major negotiations and decision making. Work was featured in StreamOn Keynote event of 2023
